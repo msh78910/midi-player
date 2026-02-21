@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Werror -pedantic -rdynamic CMakeFiles/sio_microphone.dir/example/sio_microphone.c.o -o sio_microphone  -Wl,-rpath,/home/mohammad/Documents/vscode/c/0_examples/midi_project/libsoundio-2.0.1-7/build: libsoundio.so.2.0.0 -lpulse -lasound 

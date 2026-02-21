@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "MIDI_header.h"
 #include <soundio/endian.h>
 #include <soundio/soundio.h>
@@ -9,20 +10,16 @@ int beep (float freq , int len);
 int isCorrupted_MIDIFile(FILE* file);
 int playMIDI(FILE* file);
 
-int main2();
-
-int main() {
-    int len = beep (1000.0f, 3000);
-    return 0;
-}
-
-int main2() {
-    int len = beep (1000.0f, 1000);
-    return 0;
-
-    char * address = "argv";
+int main(int argc, char **argv) {
+    int len = beep (500.0f, 1000);
+    char address[100];
+    if (argc > 1) {
+        strcpy(address, argv[1]);
+    } else {
+        puts("Enter the MIDI file's address:");
+        /* *address = */ fgets(address ,99 , stdin);
+    }
     FILE* file = fopen (address, "rb");
-
     if (file == NULL)  {
         printf("%s %s\n", "couldn't read the file from: ", address);
         return 1; // the appropriate number for failing to read a file
@@ -40,6 +37,8 @@ int main2() {
         return 1;
     }
 
+    fclose(file);
+
     puts ("Read the MIDI file successfully");
 
     return 0;
@@ -52,6 +51,7 @@ int isCorrupted_MIDIFile(FILE* file) {
 }
 
 int playMIDI(FILE* file) {
+
 
     return 0;
 }

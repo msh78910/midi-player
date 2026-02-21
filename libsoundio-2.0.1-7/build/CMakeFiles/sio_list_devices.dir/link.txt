@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Werror -pedantic -rdynamic CMakeFiles/sio_list_devices.dir/example/sio_list_devices.c.o -o sio_list_devices  -Wl,-rpath,/home/mohammad/Documents/vscode/c/0_examples/midi_project/libsoundio-2.0.1-7/build: libsoundio.so.2.0.0 -lpulse -lasound 

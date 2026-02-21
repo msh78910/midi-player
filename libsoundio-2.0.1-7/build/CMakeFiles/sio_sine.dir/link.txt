@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Werror -pedantic -rdynamic CMakeFiles/sio_sine.dir/example/sio_sine.c.o -o sio_sine  -Wl,-rpath,/home/mohammad/Documents/vscode/c/0_examples/midi_project/libsoundio-2.0.1-7/build: libsoundio.so.2.0.0 -lm -lpulse -lasound 
