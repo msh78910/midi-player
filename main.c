@@ -38,7 +38,6 @@ int main(int argc, char **argv) {
     }
 
     fclose(file);
-
     puts ("Read the MIDI file successfully");
 
     return 0;
